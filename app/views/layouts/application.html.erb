@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SampleProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+<div id="templatemo_container">
+	<!-- banner -->
+    <%= render partial: "homes/banner" %>
+    <div id="templatemo_menu">
+      <%= render :partial => "homes/menu" %>   
+	</div> <!-- end of menu -->
+
+	<div id="templatemo_content_wrapper">
+    	<div id="templatemo_content">
+    
+    	<div class="column_w210 fl">
+        
+        	<%= render :partial => "homes/left" %>
+        </div> <!-- end of a column -->
+        
+        <div class="column_w430 fl vl_divider">
+        	
+            <%= yield %>       
+        </div> <!-- end of a column -->
+        
+       <div class="column_w210 fl vl_divider">
+        
+       <!-- right -->
+       <%#= render :partial => "homes/right" %>
+        </div> <!-- end of a column -->
+        
+        <div class="margin_bottom_20 h_divider"></div>        
+        <div class="margin_bottom_20"></div>
+        
+        <div class="column_w920">
+        
+      <!-- bottom images -->
+      <%= render :partial => "homes/images" %>
+        </div>
+    
+    	<div class="cleaner"></div>
+	</div> <!-- end of wrapper 02 -->        
+    </div> <!-- end of wrapper 01 -->
+    
+    <%= render :partial => "homes/footer" %>
+</div> <!-- end of container -->
+<!--  Free CSS Template is provided by www.TemplateMo.com  -->
+</body>
+</html>

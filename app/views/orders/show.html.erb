@@ -1,0 +1,40 @@
+<input name="" type="button" value="ClickMe" id="value" />
+<script>
+	$(document).ready(function(){
+		$("#value").click(function(){
+			$("#show-hide").toggle();
+		});
+	});
+</script>
+<br/>
+<br/>
+<div id="show-hide">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @order.customer_id %>
+</p>
+
+<p>
+  <strong>Ord name:</strong>
+  <%= @order.ord_name %>
+</p>
+
+<p>
+  <strong>Ord price:</strong>
+  <%= @order.ord_price %>
+</p>
+
+<p>
+  <strong>Ord qty:</strong>
+  <%= @order.ord_qty %>
+</p>
+
+<p>
+<h3><%= @order.customer.name %></h3>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
+</div>

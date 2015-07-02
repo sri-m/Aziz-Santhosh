@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing My Contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Cell</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_contacts.each do |my_contact| %>
+      <tr>
+        <td><%= my_contact.name %></td>
+        <td><%= my_contact.email %></td>
+        <td><%= my_contact.cell %></td>
+        <td><%= my_contact.address %></td>
+        <td><%= link_to 'Show', my_contact %></td>
+        <td><%= link_to 'Edit', edit_my_contact_path(my_contact) %></td>
+        <td><%= link_to 'Destroy', my_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My contact', new_my_contact_path %>
+<br />
+<br/>
+<div class="apple_pagination">
+    <div class="page_info">
+      <%#= page_entries_info @my_contacts %>
+    </div>
+    <%= will_paginate @my_contacts, :container => false %>
+  </div>
