@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+#testing with branch
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use mysql as the database for Active Record
@@ -35,6 +35,7 @@ end
 group :production do
     gem "pg"   #heroku supports only pg db
 end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
